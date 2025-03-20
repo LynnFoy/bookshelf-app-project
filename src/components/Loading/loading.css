@@ -1,0 +1,28 @@
+/* Conteneur principal du loader */
+.loader-container {
+  display: flex;                   /* Utilisation de Flexbox pour aligner le contenu */
+  flex-direction: column;          /* Les éléments enfants seront alignés verticalement */
+  align-items: center;             /* Alignement horizontal centré */
+  justify-content: center;         /* Alignement vertical centré */
+  height: 100vh;                   /* Prend toute la hauteur de la fenêtre */
+}
+
+/* Animation du spinner (cercle tournant) */
+.spinner {
+  width: 50px;                     /* Largeur du spinner */
+  height: 50px;                    /* Hauteur du spinner */
+  border: 5px solid rgba(0, 0, 0, 0.1); /* Bordure grise clair */
+  border-top: 5px solid blue;      /* Bordure bleue en haut pour la couleur du spinner */
+  border-radius: 50%;              /* Pour rendre l'élément circulaire */
+  animation: spin 1s linear infinite; /* Animation spin pour faire tourner l'élément */
+}
+
+/* Définition de l'animation de rotation */
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg);       /* Initialisation de la rotation à 0 degré */
+  }
+  100% { 
+    transform: rotate(360deg);     /* Rotation complète à 360 degrés */
+  }
+}
